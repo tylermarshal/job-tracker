@@ -2,6 +2,6 @@
 
 <% @categories.each do |category| %>
   <%= category.title %>
-  <%= link_to "Edit", edit_company_path(category) %>
-  <%= link_to "Delete", company_path(category), method: "delete" %>
+  <%= link_to "Edit", edit_category_path(category) %>
+  <%= link_to "Delete", category_path(category), method: "delete", data: {confirm: "Really delete the article?" %>
 <% end %>
