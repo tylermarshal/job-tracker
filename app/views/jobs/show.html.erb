@@ -23,4 +23,4 @@ Category: <%= link_to @job.category.title, category_path(@job.category) %>
 <%= render partial: 'comments/form' %>
 
 
-<%= link_to "<< Back to Company", company_path(@job.company) %>
+<%= link_to "<< Back to All Jobs at #{@job.company.name}", company_path(@job.company) %>
