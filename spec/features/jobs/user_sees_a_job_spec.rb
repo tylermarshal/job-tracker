@@ -10,5 +10,9 @@ describe "User sees a specific job" do
     expect(page).to have_content("ESPN")
     expect(page).to have_content("Developer")
     expect(page).to have_content("70")
+
+    click_on "delete"
+    
+    expect(current_path).to eq(company_jobs_path(company))
   end
 end

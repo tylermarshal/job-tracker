@@ -3,8 +3,9 @@ require 'rails_helper'
 describe "a user visits update a job page" do
   it "the user can see the edit form" do
     company = Company.create!(name: "ESPN")
+    job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver")
 
-    visit new_company_job_path(company)
+    visit edit_company_job_path(company,job)
 
     expect(page).to have_content("Title")
     expect(page).to have_content("Description")
