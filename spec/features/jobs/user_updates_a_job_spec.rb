@@ -6,13 +6,13 @@ describe "a user fills out the form to update a job" do
     company = Company.create!(name: "ESPN")
     job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category_id: category.id)
 
-    visit edit_company_job_path(company, job)
+    visit edit_job_path(job)
 
     fill_in "job[title]", with: "Senior Developer"
 
     click_on "Update Job"
 
-    expect(current_path).to eq(company_job_path(company,job))
+    expect(current_path).to eq(job_path(job))
 
     expect(page).to have_content("Senior Developer")
   end

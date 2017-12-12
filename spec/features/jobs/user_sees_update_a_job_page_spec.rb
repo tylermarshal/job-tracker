@@ -6,7 +6,7 @@ describe "a user visits update a job page" do
     company = Company.create!(name: "ESPN")
     job = company.jobs.create!(title: "Developer", level_of_interest: 70, city: "Denver", category_id: category.id)
 
-    visit edit_company_job_path(company,job)
+    visit edit_job_path(job)
 
     expect(page).to have_content("Title")
     expect(page).to have_content("Description")
