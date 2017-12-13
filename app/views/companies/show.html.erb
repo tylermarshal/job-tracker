@@ -1,12 +1,16 @@
 <h1>Available Jobs for <%= @company.name %></h1>
 
+<div class="info_container">
+  <ul class="company_jobs">
+    <% @company.jobs.each do |job| %>
+      <li class="job_listing"><%= link_to job.title, job_path(job), class: "job_listing" %></li>
+    <% end %>
+  </ul>
+</div>
 
-<ul class="company_jobs">
-  <% @company.jobs.each do |job| %>
-    <li class="job_listing"><%= link_to job.title, job_path(job), class: "job_listing" %></li>
-  <% end %>
-</ul>
-<%= link_to "Create New Job at #{@company.name}", new_company_job_path(@company) %>
+<div class="create-new">
+<%= link_to "Create New Job at #{@company.name}", new_company_job_path(@company), class: "edit_delete" %>
+</div>
 
 <h3 class="submitted_header">Contacts <%= @company.contacts.size %></h3>
 
