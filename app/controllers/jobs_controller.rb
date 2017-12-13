@@ -1,11 +1,11 @@
 class JobsController < ApplicationController
 
-  before_action :set_company, only: [:index, :new, :create]
+  before_action :set_company, only: [:new, :create]
   before_action :set_job, only: [:show, :destroy, :edit, :update]
   before_action :set_category, only: [:edit, :new]
 
   def index
-    @jobs = @company.jobs
+    @jobs = Job.all
   end
 
   def new
@@ -13,7 +13,6 @@ class JobsController < ApplicationController
   end
 
   def create
-    # require "pry"; binding.pry
     @job = @company.jobs.new(job_params)
     if @job.save
       flash[:success] = "You created #{@job.title} at #{@company.name}"
