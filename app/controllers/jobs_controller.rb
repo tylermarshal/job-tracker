@@ -5,7 +5,8 @@ class JobsController < ApplicationController
   before_action :set_category, only: [:edit, :new]
 
   def index
-    @jobs = Job.all
+    sort_params = {"location" => "city", "interest" => "level_of_interest", nil => "title"}
+    @jobs = Job.order(sort_params[params[:sort]])
   end
 
   def new
