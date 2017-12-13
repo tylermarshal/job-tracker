@@ -1,11 +1,15 @@
-<h3>All Companies</h3>
+<h1>All Companies</h1>
 
-<ul>
-  <% @companies.each do |company| %>
-  <li class=company_<%= company.id %>>
-    <%= link_to company.name, company_path(company) %>:
-    <%= link_to "Edit", edit_company_path(company) %>
-    <%= link_to "Delete", company_path(company), method: "delete", data: {confirm: "Really delete the company?"} %>
-  </li>
-  <% end %>
-</ul>
+<div class=info_container>
+  <ul class="info">
+    <% @companies.sort_by(&:name).each do |company| %>
+    <li class="company"<%= company.id %>>
+      <%= link_to company.name, company_path(company) %>
+      <div>
+        <%= link_to "Edit", edit_company_path(company), class: "edit_delete"  %>
+        <%= link_to "Delete", company_path(company), method: "delete", data: {confirm: "Really delete the company?"}, class: "edit_delete"  %>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>

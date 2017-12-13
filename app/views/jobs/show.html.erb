@@ -1,26 +1,27 @@
-Title: <%= @job.title %>
-<br>
+<div class="info_container">
+  <div class="info">
+    <h1><%= @job.title %></h1>
+    <p><span class="bold">Description:</span> <%= @job.description %></p>
+    <p><span class="bold">Level of Interest:</span> <%= @job.level_of_interest %></p>
+    <p><span class="bold">City:</span> <%= @job.city %></p>
+    <p><span class="bold">Company:</span> <%= link_to @job.company.name, company_path(@job.company) %></p>
+    <p><span class="bold">Category:</span> <%= link_to @job.category.title, category_path(@job.category) %></p>
+    <div><%= link_to "delete", job_path(@job), method: :delete, data: {confirm: "Really delete the article?"}, class: "edit_delete" %></div>
+    <div><%= link_to "edit", edit_job_path(@job), class: "edit_delete" %></div>
+  </div>
+</div>
 
-Description: <%= @job.description %>
-<br>
+<h3 class="submitted_header">Comments <%= @job.comments.size %></h3>
 
-Level of Interest: <%= @job.level_of_interest %>
-<br>
+<div class="submitted_comment_container">
+  <div class="submitted_comment">
+  <%= render partial: 'jobs/comment', collection: @job.comments.reverse %>
+  </div>
+</div>
 
-City: <%= @job.city %>
-<br>
-
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
-<br>
-
-Category: <%= link_to @job.category.title, category_path(@job.category) %>
-
-<div><%= link_to "delete", job_path(@job), method: :delete, data: {confirm: "Really delete the article?"} %></div>
-<div><%= link_to "edit", edit_job_path(@job) %></div>
-
-<h3>Comments <%= @job.comments.size %></h3>
-<%= render partial: 'jobs/comment', collection: @job.comments.reverse %>
+<h3>Post a Comment</h3>
+<div class="form">
 <%= render partial: 'comments/form' %>
-
+</div>
 
 <%= link_to "<< Back to All Jobs at #{@job.company.name}", company_path(@job.company) %>

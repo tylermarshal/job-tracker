@@ -12,12 +12,144 @@ nav ul {
   margin-right: 50px;
 }
 
+a:hover {
+  color: #2565e6;
+}
+
+a:visited {
+  text-decoration: none;
+  decoration: none;
+}
+
 a {
   text-decoration: none;
 }
 
-.top_nav_links:hover {
-  color: #2565e6
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 40px;
+  margin: 20px;
+}
+
+h3 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.info_container {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: black;
+}
+
+.job_info p {
+  margin: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.job_listing {
+  color: black;
+  font-family: sans-serif;
+  width: 30%;
+  margin: 20px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.company div {
+  margin-top: 10px;
+}
+
+.company_jobs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.submitted_contact {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.submitted_comment_container {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+
+.submitted_comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+.submitted_header {
+  background-color: #f7f7f7;
+}
+
+.submit_button {
+  background-color: #2565e6;
+  height: 30px;
+  width: 70px;
+  color: white;
+  border-radius: 30px;
+}
+
+.edit_delete {
+  background-color: #2565e6;
+  color: white;
+  border-radius: 30px;
+}
+
+.text_area {
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 150px;
+  width: 300px;
+}
+
+.comment {
+  margin: 20px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.contact {
+  width: 33%
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
 }
 
 .top_nav_links {
@@ -30,4 +162,16 @@ a {
   width: auto;
   height: 100px;
   padding: 12.5px;
+}
+
+#home_header {
+  margin-top: 50px;
+  color: white;
+  font-size: 100px;
+  font-family: 'Michroma'
+}
+
+#home_image {
+  background: url(building_3.jpeg) no-repeat;
+  background-size: cover;
 }
