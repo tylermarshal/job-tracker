@@ -5,13 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="/reset.css">
-  <link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 <body>
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: name %>
   <% end %>
+<nav>
+  <a href="/"><img id="logo" src="https://cdn.pixabay.com/photo/2015/12/08/17/40/magnifying-glass-1083378_1280.png"></a>
+    <ul>
+      <li><%= link_to "Companies", companies_path, class: "top_nav_links" %></li>
+      <li><%= link_to "Categories", categories_path, class: "top_nav_links" %></li>
+      <li><%= link_to "Jobs", jobs_path, class: "top_nav_links" %></li>
+      <li><%= link_to "Dashboard", jobs_path, class: "top_nav_links" %></li>
+    </ul>
+</nav>
 <%= yield %>
 
 </body>

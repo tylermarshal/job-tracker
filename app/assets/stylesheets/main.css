@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e67525;
+  height: 125px;
+}
+nav ul {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top_nav_links:hover {
+  color: #2565e6
+}
+
+.top_nav_links {
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+#logo {
+  width: auto;
+  height: 100px;
+  padding: 12.5px;
+}
