@@ -11,12 +11,12 @@
     <%= content_tag :div, msg, class: name %>
   <% end %>
 <nav>
-  <a href="/"><img id="logo" src="https://cdn.pixabay.com/photo/2015/12/08/17/40/magnifying-glass-1083378_1280.png"></a>
+  <a href="/"><img id="logo" src="/assets/logo.png"></a>
     <ul>
-      <li><%= link_to "Companies", companies_path, class: "top_nav_links" %></li>
+      <li><%= link_to "Dashboard", dashboard_index_path, class: "top_nav_links" %></li>
       <li><%= link_to "Categories", categories_path, class: "top_nav_links" %></li>
+      <li><%= link_to "Companies", companies_path, class: "top_nav_links" %></li>
       <li><%= link_to "Jobs", jobs_path, class: "top_nav_links" %></li>
-      <li><%= link_to "Dashboard", jobs_path, class: "top_nav_links" %></li>
     </ul>
 </nav>
 <%= yield %>
