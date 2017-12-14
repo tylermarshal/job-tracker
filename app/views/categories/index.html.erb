@@ -4,10 +4,12 @@
   <% @categories.each do |category| %>
   <tr>
     <th><%= link_to category.title, category_path(category), class: "company-title"  %></th>
-    <th><%= link_to "Edit", edit_category_path(category), class: "edit_delete"  %>
-    <%= link_to "Delete", category_path(category), method: "delete", data: {confirm: "Really delete the category?"}, class: "edit_delete"  %></th>
-
-
+    <th><%= link_to "Edit", edit_category_path(category), class: "edit-delete"  %>
+    <%= link_to "Delete", category_path(category), method: "delete", data: {confirm: "Really delete the category?"}, class: "edit-delete"  %></th>
   </tr>
   <% end %>
 </table>
+
+<div class="create-new">
+<%= link_to "Create a New Category", new_category_path, class: "edit-delete" %>
+</div>

@@ -4,8 +4,8 @@
   <% @companies.sort_by(&:name).each do |company| %>
   <tr>
     <th><%= link_to company.name, company_path(company), class: "company-title" %></th>
-    <th><%= link_to "Edit", edit_company_path(company), class: "edit_delete"  %>
-    <%= link_to "Delete", company_path(company), method: "delete", data: {confirm: "Really delete the company?"}, class: "edit_delete"  %></th>
+    <th><%= link_to "Edit", edit_company_path(company), class: "edit-delete"  %>
+    <%= link_to "Delete", company_path(company), method: "delete", data: {confirm: "Really delete the company?"}, class: "edit-delete"  %></th>
   </tr>
   <% end %>
 </table>

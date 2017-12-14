@@ -70,7 +70,7 @@ tr:hover {background-color:#f5f5f5;}
   font-family: sans-serif;
 }
 
-.info_container {
+.info-container {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -85,10 +85,6 @@ tr:hover {background-color:#f5f5f5;}
   font-size: 18px;
   font-family: sans-serif;
   color: black;
-}
-
-.job_info p {
-  margin: 5px;
 }
 
 .bold {
@@ -115,7 +111,7 @@ tr:hover {background-color:#f5f5f5;}
   margin: 30px;
 }
 
-.submitted_contact {
+.submitted-contact {
   background-color: #f7f7f7;
   display: flex;
   flex-flow: row wrap;
@@ -127,13 +123,13 @@ tr:hover {background-color:#f5f5f5;}
   width: 33%;
 }
 
-.submitted_comment_container {
+.submitted-comment-container {
   background-color: #f7f7f7;
   display: flex;
   justify-content: center;
 }
 
-.submitted_comment {
+.submitted-comment {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -141,12 +137,12 @@ tr:hover {background-color:#f5f5f5;}
   padding-bottom: 20px;
 }
 
-.submitted_header {
+.submitted-header {
   background-color: #f7f7f7;
   margin-bottom: -10px;
 }
 
-.submit_button {
+.submit-button {
   background-color: #2565e6;
   height: 30px;
   width: 70px;
@@ -154,19 +150,20 @@ tr:hover {background-color:#f5f5f5;}
   border-radius: 30px;
 }
 
-.edit_delete:hover {
+.edit-delete:hover {
   color: white;
 }
 
-.edit_delete {
+.edit-delete {
   background-color: #2565e6;
   color: white;
   border-radius: 30px;
   padding: 5px 10px 5px 10px;
   margin: 0 5px 0 5px;
+  font-family: sans-serif;
 }
 
-.text_area {
+.text-area {
   padding: 12px 20px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -189,7 +186,7 @@ tr:hover {background-color:#f5f5f5;}
   font-family: sans-serif;
 }
 
-.top_nav_links {
+.top-nav-links {
   color: white;
   font-size: 25px;
   font-family: sans-serif;
@@ -202,14 +199,14 @@ tr:hover {background-color:#f5f5f5;}
   margin-left: 10px;
 }
 
-#home_header {
+#home-header {
   margin-top: 50px;
   color: white;
   font-size: 100px;
   font-family: 'Michroma'
 }
 
-#home_image {
+#home-image {
   background: url(building_3.jpeg) no-repeat;
   background-size: cover;
 }
