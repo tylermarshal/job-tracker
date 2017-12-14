@@ -1,13 +1,15 @@
 <div class="info-container">
   <div class="info">
     <h1><%= @job.title %></h1>
-    <p><span class="bold">Description:</span> <%= @job.description %></p>
-    <p><span class="bold">Level of Interest:</span> <%= @job.level_of_interest %></p>
-    <p><span class="bold">City:</span> <%= @job.city %></p>
-    <p><span class="bold">Company:</span> <%= link_to @job.company.name, company_path(@job.company) %></p>
-    <p><span class="bold">Category:</span> <%= link_to @job.category.title, category_path(@job.category) %></p>
-    <div><%= link_to "delete", job_path(@job), method: :delete, data: {confirm: "Really delete the article?"}, class: "edit-delete" %></div>
-    <div><%= link_to "edit", edit_job_path(@job), class: "edit-delete" %></div>
+    <p class="margin-top-text"><span class="bold">Description:</span> <%= @job.description %></p>
+    <p class="margin-top-text"><span class="bold">Level of Interest:</span> <%= @job.level_of_interest %></p>
+    <p class="margin-top-text"><span class="bold">City:</span> <%= @job.city %></p>
+    <p class="margin-top-text"><span class="bold">Company:</span> <%= link_to @job.company.name, company_path(@job.company) %></p>
+    <p class="margin-top-text"><span class="bold">Category:</span> <%= link_to @job.category.title, category_path(@job.category) %></p>
+    <div class="create-new">
+      <div><%= link_to "Delete", job_path(@job), method: :delete, data: {confirm: "Really delete the article?"}, class: "edit-delete" %></div>
+      <div><%= link_to "Edit", edit_job_path(@job), class: "edit-delete" %></div>
+    </div>
   </div>
 </div>
 
