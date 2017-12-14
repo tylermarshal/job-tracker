@@ -14,7 +14,5 @@
   <%= f.label :category %>
   <%= f.select(:category_id , options_for_select(Category.all.sort_by(&:title).map {|p| [p.title, p.id]})) %>
 
-  <%= f.submit, class: "submit-button" %>
+  <%= f.submit class: "submit-button" %>
 <% end %>
-
-<div><%= link_to "Create a New Category", new_category_path %></div>

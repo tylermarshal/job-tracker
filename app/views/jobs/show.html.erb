@@ -24,4 +24,4 @@
 <%= render partial: 'comments/form' %>
 </div>
 
-<%= link_to "<< Back to All Jobs at #{@job.company.name}", company_path(@job.company) %>
+<%= link_to "<< Back to All Jobs at #{@job.company.name}", company_path(@job.company), class: "back-button" %>
