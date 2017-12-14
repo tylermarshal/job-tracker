@@ -7,9 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: name %>
-  <% end %>
 <nav>
   <a href="/"><img id="logo" src="/assets/logo.png"></a>
     <ul>
@@ -19,6 +16,11 @@
       <li><%= link_to "Jobs", jobs_path, class: "top_nav_links" %></li>
     </ul>
 </nav>
+<div class="flash-container">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "flash-message" %>
+  <% end %>
+</div>
 <%= yield %>
 
 </body>

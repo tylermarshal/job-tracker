@@ -39,6 +39,37 @@ h3 {
   padding: 20px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+
+.flash-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.flash-message {
+  font-family: sans-serif;
+}
+
 .info_container {
   display: flex;
   justify-content: center;

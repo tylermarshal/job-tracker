@@ -7,7 +7,6 @@
     <th>Interest</th>
     <th>Company</th>
   </tr>
-
   <% @jobs.each do |job| %>
   <tr>
     <td><%= link_to job.title, job_path(job) %></td>
