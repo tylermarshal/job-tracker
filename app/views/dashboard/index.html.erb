@@ -1,0 +1,41 @@
+
+<h3 class="dashboard-text">Count of Jobs by Interest Level</h3>
+<table>
+  <tr>
+    <th>0 - 20</th>
+    <th>>20 - 40</th>
+    <th>>40 - 60</th>
+    <th>>60 - 80</th>
+    <th>>80-100</th>
+  </tr>
+  <tr>
+    <td><%= @count_jobs_by_interest_20 %></td>
+    <td><%= @count_jobs_by_interest_40 %></td>
+    <td><%= @count_jobs_by_interest_60 %></td>
+    <td><%= @count_jobs_by_interest_80 %></td>
+    <td><%= @count_jobs_by_interest_100 %></td>
+  </tr>
+</table>
+
+<h3 class="dashboard-text">Top Companies by Average Interest Level of Jobs</h3>
+<div class="info-container">
+  <div class="info">
+    <p><span class="bold"><%= @top_three_companies.keys[0] %></span>: <%= @top_three_companies.values[0].round(2) %></p>
+    <p class="dashboard-text"><span class="bold"><%= @top_three_companies.keys[1] %></span>: <%= @top_three_companies.values[1].round(2) %></p>
+    <p class="dashboard-text"><span class="bold"><%= @top_three_companies.keys[2] %></span>: <%= @top_three_companies.values[2].round(2) %></p>
+  </div>
+</div>
+
+<h3 class="dashboard-text">Count of Jobs by Location</h3>
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Number of Jobs</th>
+  </tr>
+<% @count_jobs_by_location.each do |location, count| %>
+  <tr>
+    <td><%= location %></td>
+    <td><%= count %></td>
+  </tr>
+<% end %>
+</table>
